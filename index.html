@@ -20,6 +20,9 @@
   <link rel="icon" type="image/jpeg" href="web-assets/app-icon.jpg">
   <link rel="apple-touch-icon" href="web-assets/app-icon.jpg">
 
+  <!-- Animation Library: AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -58,7 +61,7 @@
   <section class="hero-section" id="hero">
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
           <div class="hero-badge-pill" data-i18n="heroBadge">
             <span class="badge-gold">👑 تطبيق مدفوع (بقيمة 99 ر.س)</span>
             <span class="badge-free-accent">متاح مجاناً لأول 12 مختبراً فقط! 🎁</span>
@@ -90,7 +93,7 @@
           </div>
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-visual" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
           <div class="device-frame">
             <div class="device-screen">
               <img src="web-assets/feature-graphic.jpg" alt="MazdaCare Pro Showcase" class="hero-screen-img" />
@@ -119,7 +122,7 @@
   <!-- Special Closed Testing Recruitment Banner -->
   <section class="section-tester-banner" id="tester-guide">
     <div class="container">
-      <div class="tester-card-box">
+      <div class="tester-card-box" data-aos="zoom-in" data-aos-duration="850">
         <!-- Pricing Spotlight Banner -->
         <div class="pricing-spotlight-box">
           <div class="pricing-spotlight-header">
@@ -536,6 +539,21 @@
     </div>
   </footer>
 
+  <!-- Mobile Floating Sticky Action Bar -->
+  <aside class="mobile-sticky-bar" id="mobile-sticky-bar" aria-label="Quick Action Bar">
+    <div class="sticky-bar-inner">
+      <div class="sticky-price-info">
+        <span class="sticky-strike-price">99 ر.س</span>
+        <span class="sticky-free-price">0 ر.س (مجاناً)</span>
+        <small class="sticky-seats-left">متبقي 8 مقاعد فقط!</small>
+      </div>
+      <a href="https://play.google.com/apps/testing/com.mazdacare.app" target="_blank" rel="noopener" class="btn btn-primary btn-sticky-download" id="mobile-sticky-btn">
+        <span>⚡ احجز نسختك المجانية</span>
+      </a>
+      <button class="sticky-dismiss-btn" id="sticky-dismiss-btn" title="إخفاء" aria-label="إخفاء الشريط">✕</button>
+    </div>
+  </aside>
+
   <!-- Lightbox Modal for Screenshots -->
   <div class="lightbox-modal" id="lightbox-modal">
     <div class="lightbox-content">
@@ -543,6 +561,10 @@
       <img src="" alt="Enlarged View" class="lightbox-img" id="lightbox-img">
     </div>
   </div>
+
+  <!-- Animation Libraries (AOS & Canvas Confetti) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
   <!-- JavaScript Modules -->
   <script src="data.js"></script>

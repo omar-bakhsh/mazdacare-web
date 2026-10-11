@@ -840,6 +840,87 @@
     });
   }
 
+  // --- Animations & Pro UX Library Initializer ---
+  function initAnimations() {
+    // 1. Initialize AOS (Animate On Scroll)
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        once: true,
+        duration: 800,
+        offset: 50,
+        easing: 'ease-out-cubic'
+      });
+    }
+
+    // 2. Confetti Particle Trigger Function
+    function triggerCelebration() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 90,
+          spread: 75,
+          origin: { y: 0.65 },
+          colors: ['#00e5ff', '#c41230', '#34c759', '#ffb800', '#ffffff']
+        });
+        setTimeout(() => {
+          confetti({
+            particleCount: 50,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: ['#00e5ff', '#34c759']
+          });
+          confetti({
+            particleCount: 50,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: ['#c41230', '#ffb800']
+          });
+        }, 250);
+      }
+    }
+
+    // Attach celebration to all testing/claim buttons
+    const celebrationTargets = document.querySelectorAll(
+      '#hero-tester-btn, .btn-google-play, #mobile-sticky-btn, .featured-download-card .btn'
+    );
+    celebrationTargets.forEach(el => {
+      el.addEventListener('click', () => {
+        triggerCelebration();
+      });
+    });
+  }
+
+  // --- Mobile Sticky Bottom Bar Controller ---
+  function initMobileStickyBar() {
+    const bar = document.getElementById('mobile-sticky-bar');
+    const dismissBtn = document.getElementById('sticky-dismiss-btn');
+    if (!bar) return;
+
+    let isDismissed = sessionStorage.getItem('mazdacare_sticky_dismissed') === 'true';
+    if (isDismissed) {
+      bar.style.display = 'none';
+      return;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300 && !isDismissed) {
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    if (dismissBtn) {
+      dismissBtn.onclick = (e) => {
+        e.stopPropagation();
+        bar.classList.remove('visible');
+        isDismissed = true;
+        sessionStorage.setItem('mazdacare_sticky_dismissed', 'true');
+      };
+    }
+  }
+
   // --- Initialize Everything On DOM Ready ---
   document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(currentLang);
@@ -860,6 +941,8 @@
     initScreenshotGallery();
     initContactForm();
     initMobileMenu();
+    initAnimations();
+    initMobileStickyBar();
   });
 
   function initFluidsSelector() {
