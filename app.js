@@ -61,20 +61,20 @@
     let isMazda = false;
 
     if (wmi.startsWith('JM1') || wmi.startsWith('JM3') || wmi.startsWith('JM7') || wmi.startsWith('JMZ')) {
-      origin_ar = 'مازدا موتور كوربوريشن - هيروشيما / هوفو (اليابان 🇯🇵)';
-      origin_en = 'Mazda Motor Corp - Hiroshima / Hofu (Japan 🇯🇵)';
+      origin_ar = 'مازدا موتور كوربوريشن - هيروشيما / هوفو (اليابان)';
+      origin_en = 'Mazda Motor Corp - Hiroshima / Hofu (Japan)';
       isMazda = true;
     } else if (wmi.startsWith('3MD') || wmi.startsWith('3MZ')) {
-      origin_ar = 'ماzدا دي مكسيكو - سالامانكا (المكسيك 🇲🇽)';
-      origin_en = 'Mazda de Mexico - Salamanca (Mexico 🇲🇽)';
+      origin_ar = 'مازدا دي مكسيكو - سالامانكا (المكسيك)';
+      origin_en = 'Mazda de Mexico - Salamanca (Mexico)';
       isMazda = true;
     } else if (wmi.startsWith('4F4') || wmi.startsWith('1YV')) {
-      origin_ar = 'مازدا تويوتا للتصنيع - ألاباما (الولايات المتحدة 🇺🇸)';
-      origin_en = 'Mazda Toyota Mfg - Alabama / AutoAlliance (USA 🇺🇸)';
+      origin_ar = 'مازدا تويوتا للتصنيع - ألاباما (الولايات المتحدة)';
+      origin_en = 'Mazda Toyota Mfg - Alabama / AutoAlliance (USA)';
       isMazda = true;
     } else if (wmi.startsWith('MM8')) {
-      origin_ar = 'أوتو ألاينس تايلاند - رايونغ (تايلاند 🇹🇭)';
-      origin_en = 'AutoAlliance Thailand - Rayong (Thailand 🇹🇭)';
+      origin_ar = 'أوتو ألاينس تايلاند - رايونغ (تايلاند)';
+      origin_en = 'AutoAlliance Thailand - Rayong (Thailand)';
       isMazda = true;
     }
 
@@ -134,7 +134,7 @@
       navSchedule: 'جداول الصيانة',
       navScreenshots: 'واجهات التطبيق',
       navDownload: 'تحميل التطبيق',
-      heroBadge: 'تطبيق مهندسي وملاك مازدا الأول 🚗',
+      heroBadge: 'تطبيق مهندسي وملاك مازدا الأول',
       heroTitle: 'الفحص الذكي والصيانة الاحترافية لسيارات مازدا',
       heroSubtitle: 'فحص أعطال كمبيوتر السيارة OBD2 الحي، متتبع قطع الإشعال Misfire، عداد HUD عاكس الزجاج الأمامي، ودليل السوائل والزيوت المعتمدة لأسطول مازدا كاملاً.',
       btnDownloadApk: 'تحميل APK مباشر',
@@ -201,7 +201,7 @@
       navSchedule: 'Maintenance',
       navScreenshots: 'Screenshots',
       navDownload: 'Download',
-      heroBadge: '👑 Premium App (99 SAR) - 100% Free for First 12 Testers! 🎁',
+      heroBadge: 'Premium App (99 SAR) - 100% Free for First 12 Testers!',
       heroTitle: 'Smart Diagnostics & Engineering Maintenance for Mazda',
       heroSubtitle: 'Live OBD-II BLE diagnostics, real-time Mode 06 misfire tracker, nighttime windshield HUD speedometer, and official fleet fluids specifications.',
       btnDownloadApk: 'Claim Free Copy on Google Play',
@@ -290,7 +290,8 @@
     // Update Lang Switcher button text
     const langBtn = document.getElementById('lang-switch-btn');
     if (langBtn) {
-      langBtn.innerHTML = lang === 'ar' ? '🌐 English' : '🌐 العربية';
+      const globeSvg = `<svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
+      langBtn.innerHTML = lang === 'ar' ? `${globeSvg} English` : `${globeSvg} العربية`;
     }
 
     // Refresh dynamic widgets
@@ -330,7 +331,7 @@
       if (!decoded.validLength) {
         vinResult.innerHTML = `
           <div class="result-box error">
-            <span class="icon">⚠️</span>
+            <span class="icon"><svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
             <p>${currentLang === 'ar' ? decoded.message_ar : decoded.message_en}</p>
           </div>
         `;
@@ -339,8 +340,8 @@
       }
 
       const checksumBadge = decoded.checksumValid
-        ? `<span class="badge success">✓ ${currentLang === 'ar' ? 'مطابق لمعيار ISO 3779 (رقم تحقق سليم)' : 'ISO 3779 Verified Checksum'}</span>`
-        : `<span class="badge warning">⚠️ ${currentLang === 'ar' ? 'رقم تحقق غير قياسي أو تم تعديله' : 'Non-standard checksum'}</span>`;
+        ? `<span class="badge success"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> ${currentLang === 'ar' ? 'مطابق لمعيار ISO 3779 (رقم تحقق سليم)' : 'ISO 3779 Verified Checksum'}</span>`
+        : `<span class="badge warning"><svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> ${currentLang === 'ar' ? 'رقم تحقق غير قياسي أو تم تعديله' : 'Non-standard checksum'}</span>`;
 
       const origin = currentLang === 'ar' ? decoded.origin_ar : decoded.origin_en;
       const model = currentLang === 'ar' ? decoded.modelLine_ar : decoded.modelLine_en;
@@ -441,15 +442,24 @@
           </div>
           <div class="dtc-card-body">
             <div class="dtc-sub-block">
-              <h5>🚨 ${currentLang === 'ar' ? 'الأعراض المرافقة:' : 'Symptoms:'}</h5>
+              <h5>
+                <svg class="svg-icon svg-icon-sm" style="color: #ef4444;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                ${currentLang === 'ar' ? 'الأعراض المرافقة:' : 'Symptoms:'}
+              </h5>
               <ul>${symptoms.map(s => `<li>${s}</li>`).join('')}</ul>
             </div>
             <div class="dtc-sub-block">
-              <h5>🔍 ${currentLang === 'ar' ? 'الأسباب المحتملة:' : 'Possible Causes:'}</h5>
+              <h5>
+                <svg class="svg-icon svg-icon-sm" style="color: #d97706;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                ${currentLang === 'ar' ? 'الأسباب المحتملة:' : 'Possible Causes:'}
+              </h5>
               <ul>${causes.map(c => `<li>${c}</li>`).join('')}</ul>
             </div>
             <div class="dtc-sub-block fixes">
-              <h5>🛠️ ${currentLang === 'ar' ? 'خطوات الإصلاح المعتمدة:' : 'Recommended Technical Fixes:'}</h5>
+              <h5>
+                <svg class="svg-icon svg-icon-sm" style="color: #16a34a;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                ${currentLang === 'ar' ? 'خطوات الإصلاح المعتمدة:' : 'Recommended Technical Fixes:'}
+              </h5>
               <ul>${fixes.map(f => `<li>${f}</li>`).join('')}</ul>
             </div>
           </div>
@@ -530,28 +540,36 @@
         </div>
         <div class="specs-table-grid">
           <div class="spec-cell">
-            <span class="spec-icon">🛢️</span>
+            <span class="spec-icon" style="color: #16a34a;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'لزوجة زيت المحرك' : 'Engine Oil Viscosity'}</strong>
               <p class="highlight">${s.oilGrade}</p>
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">⚖️</span>
+            <span class="spec-icon" style="color: #0284c7;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سعة تعبئة الزيت' : 'Oil Sump Capacity'}</strong>
               <p>${oilCap}</p>
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">🏷️</span>
+            <span class="spec-icon" style="color: #7c3aed;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'رقم فلتر الزيت OEM' : 'OEM Oil Filter Part'}</strong>
               <p class="font-mono">${s.oilFilter}</p>
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">⚙️</span>
+            <span class="spec-icon" style="color: #c41230;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سائل ناقل الحركة (القير)' : 'Transmission Fluid (ATF)'}</strong>
               <p class="highlight">${s.transmission}</p>
@@ -559,7 +577,9 @@
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">❄️</span>
+            <span class="spec-icon" style="color: #0284c7;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سائل تبريد المحرك' : 'Engine Coolant'}</strong>
               <p class="highlight">${coolantName}</p>
@@ -567,7 +587,9 @@
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">⚡</span>
+            <span class="spec-icon" style="color: #d97706;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'شمعات الإشعال (البواجي)' : 'Spark Plugs & Torque'}</strong>
               <p>${sparkName}</p>
@@ -575,28 +597,36 @@
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">🚙</span>
+            <span class="spec-icon" style="color: #475569;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-4H7L5 12v5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'زيوت الدبل والدفرنس (AWD)' : 'Transfer Case & Diff'}</strong>
               <p>${diff}</p>
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">🔋</span>
+            <span class="spec-icon" style="color: #16a34a;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="11" x2="23" y2="13"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'البطارية ونظام i-STOP' : 'Battery & i-STOP System'}</strong>
               <p>${battery}</p>
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">🛑</span>
+            <span class="spec-icon" style="color: #dc2626;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سائل الفرامل وضغط الإطارات' : 'Brake Fluid & Tire PSI'}</strong>
               <p>${s.brakeFluid} | ${s.tirePressure}</p>
             </div>
           </div>
           <div class="spec-cell">
-            <span class="spec-icon">⛽</span>
+            <span class="spec-icon" style="color: #0284c7;">
+              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v18z"/><path d="M15 10h2a2 2 0 0 1 2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.41L18 4"/><line x1="3" y1="11" x2="15" y2="11"/></svg>
+            </span>
             <div>
               <strong>${currentLang === 'ar' ? 'نوع البنزين وسعة التانكي' : 'Fuel Grade & Fuel Tank'}</strong>
               <p>${fuel}</p>
@@ -605,10 +635,12 @@
         </div>
         <div class="specs-actions">
           <button id="copy-specs-btn" class="btn btn-secondary">
-            📋 ${currentLang === 'ar' ? 'نسخ المواصفات' : 'Copy Specs'}
+            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            ${currentLang === 'ar' ? 'نسخ المواصفات' : 'Copy Specs'}
           </button>
           <a id="share-whatsapp-btn" class="btn btn-whatsapp" target="_blank" rel="noopener">
-            💬 ${currentLang === 'ar' ? 'مشاركة عبر واتساب' : 'Share on WhatsApp'}
+            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.33c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.23-.76-2.69-1.12-4.42-3.86-4.55-4.04-.14-.19-1.1-1.46-1.1-2.79 0-1.32.69-1.97.94-2.24.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.4.06.61.56.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.05 1.13 1 2.08 1.31 2.38 1.46.29.15.47.13.64-.07.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.27.1 1.74.82 2.04.97.3.15.5.23.57.36.07.12.07.72-.17 1.4z"/></svg>
+            ${currentLang === 'ar' ? 'مشاركة عبر واتساب' : 'Share on WhatsApp'}
           </a>
         </div>
       </div>
@@ -618,7 +650,7 @@
     const copyBtn = document.getElementById('copy-specs-btn');
     const shareBtn = document.getElementById('share-whatsapp-btn');
 
-    const formattedSpecs = `🚗 ${name} (${car.years})\n- Engine: ${car.engine}\n- Engine Oil: ${s.oilGrade} (${oilCap})\n- Oil Filter: ${s.oilFilter}\n- Transmission: ${s.transmission}\n- Coolant: ${coolantName}\n- Spark Plugs: ${sparkName}\n- Battery: ${battery}\n\nVia MazdaCare Pro Companion 🚀`;
+    const formattedSpecs = `[MazdaCare Pro] ${name} (${car.years})\n- Engine: ${car.engine}\n- Engine Oil: ${s.oilGrade} (${oilCap})\n- Oil Filter: ${s.oilFilter}\n- Transmission: ${s.transmission}\n- Coolant: ${coolantName}\n- Spark Plugs: ${sparkName}\n- Battery: ${battery}\n\nSpecs verified via MazdaCare Pro Companion`;
 
     if (copyBtn) {
       copyBtn.onclick = () => {
@@ -714,7 +746,9 @@
           <ul class="maint-checklist">
             ${items.map(it => `
               <li>
-                <span class="check-icon">✓</span>
+                <span class="check-icon">
+                  <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
                 <span>${it}</span>
               </li>
             `).join('')}
