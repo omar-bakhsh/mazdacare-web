@@ -1962,3 +1962,61 @@ button, input, select, textarea {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   Customer Testimonials & Social Proof Styles
+   ========================================================================== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 184, 0, 0.4);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 184, 0, 0.1);
+}
+
+.stars {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-main);
+  font-style: italic;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 14px;
+}
+
+.reviewer-info strong {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.reviewer-info small {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+}
+
