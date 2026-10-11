@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="siteTitle">MazdaCare Pro | تطبيق فحص وصيانة سيارات مازدا الذكي</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="تطبيق MazdaCare Pro: فحص أعطال كمبيوتر سيارات مازدا OBD-II، متتبع قطع الإشعال Misfire، عداد HUD عاكس الزجاج، ودليل السوائل والزيوت المعتمدة لأسطول مازدا.">
+  <meta name="keywords" content="Mazda, MazdaCare, OBD2, ELM327, فحص مازدا, زيوت مازدا, CX-90, CX-60, CX-9, CX-5, مازدا 6, مازدا 3, FL22, ATF-FZ, VIN Decoder">
+  <meta name="author" content="Omar Bakhsh">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="MazdaCare Pro | تطبيق خدمة وصيانة مازدا الاحترافي">
+  <meta property="og:description" content="المساعد الهندسي الذكي لملاك سيارات مازدا: فاحص الأعطال المباشر، مواصفات السوائل الرسمية، وقارئ رقم الهيكل VIN.">
+  <meta property="og:image" content="web-assets/feature-graphic.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="web-assets/app-icon.jpg">
+  <link rel="apple-touch-icon" href="web-assets/app-icon.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <div class="brand-wrap">
+        <img src="web-assets/logo-blue.png" alt="MazdaCare Pro Logo" class="brand-logo" onerror="this.src='web-assets/app-icon.jpg'">
+        <div class="brand-text">
+          <h1>MazdaCare <span class="brand-tag">PRO</span></h1>
+        </div>
+      </div>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#features" data-i18n="navFeatures">المميزات</a>
+        <a href="#vin-tool" data-i18n="navVin">فاحص الشاصي VIN</a>
+        <a href="#dtc-tool" data-i18n="navDtc">أكواد الأعطال</a>
+        <a href="#fluids-tool" data-i18n="navFluids">دليل السوائل</a>
+        <a href="#hud-simulator" data-i18n="navHud">عداد HUD</a>
+        <a href="#maintenance" data-i18n="navSchedule">جداول الصيانة</a>
+        <a href="#screenshots" data-i18n="navScreenshots">واجهات التطبيق</a>
+        <a href="#download" data-i18n="navDownload">تحميل التطبيق</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="lang-switch-btn" class="btn-lang" aria-label="Toggle Language">🌐 English</button>
+        <a href="#download" class="btn btn-primary" data-i18n="btnDownloadApk">تحميل APK</a>
+        <button class="mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill" data-i18n="heroBadge">
+            <span>✨</span> تطبيق مهندسي وملاك مازدا الأول 🚗
+          </div>
+          <h1 class="hero-title" data-i18n="heroTitle">
+            الفحص الذكي والصيانة الاحترافية <span>لسيارات مازدا</span>
+          </h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            فحص أعطال كمبيوتر السيارة OBD2 الحي، متتبع قطع الإشعال Misfire، عداد HUD عاكس الزجاج الأمامي، ودليل السوائل والزيوت المعتمدة لأسطول مازدا كاملاً.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#download" class="btn btn-primary" data-i18n="btnDownloadApk">
+              📥 تحميل التطبيق APK
+            </a>
+            <a href="https://github.com/omar-bakhsh" target="_blank" rel="noopener" class="btn btn-secondary" data-i18n="btnGithub">
+              ⭐ المشروع على GitHub
+            </a>
+            <a href="#vin-tool" class="btn btn-secondary" data-i18n="btnTryTools">
+              🔍 تجربة الأدوات التفاعلية
+            </a>
+          </div>
+
+          <div class="hero-tech-badges">
+            <span class="tech-badge">⚡ Expo SDK 54</span>
+            <span class="tech-badge">📱 React Native 0.81</span>
+            <span class="tech-badge">🛡️ Target Android 16 (API 36)</span>
+            <span class="tech-badge">🔌 Bluetooth BLE & ELM327</span>
+            <span class="tech-badge">🌐 ثنائي اللغة (عربي / English)</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="device-frame">
+            <div class="device-screen">
+              <img src="web-assets/feature-graphic.jpg" alt="MazdaCare Pro Showcase" class="hero-screen-img" />
+            </div>
+            <!-- Floating Live Telemetry Cards -->
+            <div class="floating-telemetry-badge telemetry-top-right">
+              <span style="font-size: 1.4rem;">🏎️</span>
+              <div>
+                <small style="font-size: 0.72rem; color: var(--text-dim);">Live Telemetry</small>
+                <strong style="color: var(--cyber-cyan); font-family: monospace;">2,350 RPM | 88°C</strong>
+              </div>
+            </div>
+            <div class="floating-telemetry-badge telemetry-bottom-left">
+              <span style="font-size: 1.4rem;">✅</span>
+              <div>
+                <small style="font-size: 0.72rem; color: var(--text-dim);">DTC Diagnostic</small>
+                <strong style="color: #34c759;">0 Active Faults (Normal)</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features Pillars (6 Pillars) -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">ENGINEERING COMPANION</span>
+        <h2 data-i18n="featureObdTitle">الميزات الهندسية لتطبيق MazdaCare Pro</h2>
+        <p data-i18n="featureObdDesc">تم بناء التطبيق وتخصيصه وفق معايير هندسة سيارات مازدا وتكنولوجيا Skyactiv لتقديم دقة تشخيصية لا تضاهى.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- 1. Live OBD-II -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #00e5ff;">🔌</div>
+          <h3 data-i18n="featureObdTitle">فحص OBD-II وبلوتوث BLE مباشر</h3>
+          <p data-i18n="featureObdDesc">اتصال فوري مع أجهزة ELM327 BLE لقراءة الحساسات الحية، فحص حرارة المحرك، جهد الدينامو، ومسح لمبة المكينة Check Engine بنقرة واحدة.</p>
+        </div>
+
+        <!-- 2. Misfire Tracker -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #ff3b30;">🔥</div>
+          <h3 data-i18n="featureMisfireTitle">متتبع قطع الإشعال (Mode 06 Misfire)</h3>
+          <p data-i18n="featureMisfireDesc">خوارزمية ذكية لمراقبة كفاءة غرف الاحتراق والسلندرات في الوقت الفعلي لمحركات 4 سلندر و 6 سلندر V6 لكشف الكويلات والبواجي التالفة.</p>
+        </div>
+
+        <!-- 3. DTC Database -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #ff9500;">⚠️</div>
+          <h3 data-i18n="featureDtcTitle">موسوعة 82+ كود عطل معتمد</h3>
+          <p data-i18n="featureDtcDesc">قاعدة بيانات تشخيصية مخصصة لسيارات مازدا تترجم العطل بالعربية والإنجليزية مع توضيح الأعراض الدقيقة، الأسباب الجذرية، وخطوات الإصلاح المعتمدة.</p>
+        </div>
+
+        <!-- 4. Fluids Specs -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #34c759;">🛢️</div>
+          <h3 data-i18n="featureFluidsTitle">دليل السوائل والمواصفات الرسمية</h3>
+          <p data-i18n="featureFluidsDesc">لزوجات الزيوت الدقيقة (0W-20, 5W-30, 0W-16)، سعات القير الأصلي ATF-FZ، سائل التبريد FL22، وعزوم شد البواجي ومواصفات الدبل والدفرنس.</p>
+        </div>
+
+        <!-- 5. VIN Decoder -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #a855f7;">🔍</div>
+          <h3 data-i18n="featureVinTitle">فاحص VIN وقارئ الاستمارة OCR</h3>
+          <p data-i18n="featureVinDesc">التحقق الرياضي من مطابقة رقم الهيكل لمعيار ISO 3779، واستخراج بلد الصنع ومصنع التجميع وسنة الصنع والمحرك بدقة متناهية.</p>
+        </div>
+
+        <!-- 6. HUD Speedometer -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap" style="color: #00e5ff;">🚀</div>
+          <h3 data-i18n="featureHudTitle">عداد رقمي HUD عاكس للزجاج الأمامي</h3>
+          <p data-i18n="featureHudDesc">وضعية القيادة الليلية مع عداد سرعة نيون ضخم ومؤشر RPM وحرارة المحرك مع خاصية الانعكاس الكامل Mirror Mode لعرض البيانات على الزجاج الأمامي.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tool 1: VIN Decoder -->
+  <section class="section" id="vin-tool">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">ISO 3779 CHASSIS VALIDATION</span>
+        <h2 data-i18n="vinSectionTitle">فاحص رقم الهيكل الذكي (ISO 3779 VIN Decoder)</h2>
+        <p data-i18n="vinSectionSub">افحص رقم شاصي سيارتك مازدا للتحقق من صحته، سنة الصنع، ومصنع التجميع باليابان أو المكسيك</p>
+      </div>
+
+      <div class="tool-box">
+        <div class="input-action-row">
+          <input type="text" id="vin-input" maxlength="17" placeholder="أدخل رقم الهيكل المكون من 17 خانة (مثال: JM1GL...)" data-i18n-placeholder="vinPlaceholder" class="font-mono">
+          <button id="vin-btn" class="btn btn-primary" data-i18n="vinCheckBtn">فحص وتحليل الشاصي</button>
+        </div>
+
+        <div class="samples-wrap">
+          <span data-i18n="vinSampleLabel">أو جرب نماذج جاهزة:</span>
+          <div id="vin-samples" class="sample-buttons-list"></div>
+        </div>
+
+        <div id="vin-result" style="display: none;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tool 2: DTC Fault Codes Encyclopedia -->
+  <section class="section section-alt" id="dtc-tool">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">DIAGNOSTIC ENCYCLOPEDIA</span>
+        <h2 data-i18n="dtcSectionTitle">موسوعة أكواد الأعطال وخطوات الإصلاح</h2>
+        <p data-i18n="dtcSectionSub">ابحث عن أي كود عطل (P0300, P0171, P0700...) لمعرفة سببه وخريطة إصلاحه الهندسية</p>
+      </div>
+
+      <div class="dtc-controls">
+        <div class="dtc-search-wrap">
+          <input type="text" id="dtc-search" placeholder="ابحث برقم الكود أو العرض (مثال: P0300، تفتفة، زيت قير، CAN)..." data-i18n-placeholder="dtcSearchPlaceholder">
+        </div>
+        <div class="dtc-categories-row">
+          <button class="dtc-cat-btn active" data-cat="all">الكل (All)</button>
+          <button class="dtc-cat-btn" data-cat="fuel">الوقود وهواء السحب (Fuel & Air)</button>
+          <button class="dtc-cat-btn" data-cat="ignition">الإشعال والميسفاير (Ignition)</button>
+          <button class="dtc-cat-btn" data-cat="trans">ناقل الحركة (Transmission)</button>
+          <button class="dtc-cat-btn" data-cat="emissions">الانبعاثات والعادم (Emissions)</button>
+          <button class="dtc-cat-btn" data-cat="network">شبكة CAN Bus والكمبيوتر</button>
+        </div>
+      </div>
+
+      <div id="dtc-results" class="dtc-grid"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Tool 3: Vehicle Fluids Explorer -->
+  <section class="section" id="fluids-tool">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">ENGINEERING SPECIFICATIONS</span>
+        <h2 data-i18n="fluidsSectionTitle">دليل السوائل والزيوت المعتمدة لأسطول مازدا</h2>
+        <p data-i18n="fluidsSectionSub">اختر موديل سيارتك لاستعراض لزوجات الزيت وسعات التعبئة وقطع الغيار المعتمدة</p>
+      </div>
+
+      <div class="fluids-wrapper">
+        <div class="selector-bar">
+          <label for="vehicle-select" data-i18n="selectCarLabel">اختر طراز مازدا:</label>
+          <select id="vehicle-select"></select>
+        </div>
+
+        <div id="vehicle-specs-display"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Tool 4: HUD Windshield Simulator -->
+  <section class="section section-alt" id="hud-simulator">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">HEADS-UP PROJECTION MODE</span>
+        <h2 data-i18n="hudSectionTitle">محاكي عداد HUD العاكس للزجاج الأمامي</h2>
+        <p data-i18n="hudSectionSub">جرب تقنية الإسقاط الليلي على زجاج السيارة الأمامي مع قراءات السرعة والـ RPM الحية</p>
+      </div>
+
+      <div class="hud-box-wrap">
+        <div class="hud-control-bar">
+          <div class="hud-theme-picker">
+            <button class="hud-theme-btn active" data-theme="cyan" data-i18n="hudThemeCyan">سماوي نيون</button>
+            <button class="hud-theme-btn" data-theme="red" data-i18n="hudThemeRed">أحمر رياضي</button>
+            <button class="hud-theme-btn" data-theme="amber" data-i18n="hudThemeAmber">كهرماني ليلي</button>
+            <button class="hud-theme-btn" data-theme="green" data-i18n="hudThemeGreen">أخضر هايبر</button>
+          </div>
+          <button id="hud-mirror-btn" class="btn btn-secondary" data-i18n="hudMirrorToggle">
+            🔄 عكس الشاشة للزجاج (Mirror Mode)
+          </button>
+        </div>
+
+        <div class="hud-screen" id="hud-screen" data-theme="cyan">
+          <div class="hud-speedometer">
+            <span class="hud-digits" id="hud-speed-val">120</span>
+            <span class="hud-unit">KM/H</span>
+          </div>
+
+          <div class="hud-tachometer-bar">
+            <div class="hud-tacho-fill"></div>
+          </div>
+
+          <div class="hud-meta-row">
+            <div class="hud-meta-item">
+              <span>RPM</span>
+              <strong id="hud-rpm-val">2,380</strong>
+            </div>
+            <div class="hud-meta-item">
+              <span>GEAR</span>
+              <strong>D6</strong>
+            </div>
+            <div class="hud-meta-item">
+              <span>COOLANT</span>
+              <strong id="hud-coolant-val">88°C</strong>
+            </div>
+            <div class="hud-meta-item">
+              <span>BATTERY</span>
+              <strong>14.1 V</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Schedule Milestones -->
+  <section class="section" id="maintenance">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">FACTORY SERVICE INTERVALS</span>
+        <h2 data-i18n="maintSectionTitle">جداول الصيانة الدورية الذكية</h2>
+        <p data-i18n="maintSectionSub">قوائم فحص شاملة من 10,000 كم حتى 120,000 كم مطابقة لتوصيات المصنع</p>
+      </div>
+
+      <div class="maint-container">
+        <div class="maint-tabs" id="maint-tabs"></div>
+        <div class="maint-box" id="maint-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Gallery -->
+  <section class="section section-alt" id="screenshots">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">APP SCREENSHOTS</span>
+        <h2 data-i18n="screenshotsTitle">واجهات وشاشات تطبيق MazdaCare Pro</h2>
+        <p data-i18n="screenshotsSub">تصميم فائق الأناقة يدعم الوضعين المظلم والفاتح، واللغتين العربية والإنجليزية مع لوحات تحكم متطورة</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="web-assets/screenshot-misfire.jpg" alt="Misfire Monitor" class="gallery-thumb" />
+          <div class="gallery-caption">فحص الإشعال وقطع الاحتراق (Misfire)</div>
+        </div>
+        <div class="gallery-item">
+          <img src="web-assets/screenshot-hud.jpg" alt="HUD Speedometer" class="gallery-thumb" />
+          <div class="gallery-caption">عداد سرعة HUD العاكس للزجاج</div>
+        </div>
+        <div class="gallery-item">
+          <img src="web-assets/screenshot-dtc.jpg" alt="DTC Codes" class="gallery-thumb" />
+          <div class="gallery-caption">موسوعة أكواد الأعطال OBD-II</div>
+        </div>
+        <div class="gallery-item">
+          <img src="web-assets/screenshot-maintenance.jpg" alt="Maintenance Schedule" class="gallery-thumb" />
+          <div class="gallery-caption">جداول الصيانة ودليل الزيوت والسوائل</div>
+        </div>
+        <div class="gallery-item">
+          <img src="web-assets/screenshot-vin.jpg" alt="VIN Decoder" class="gallery-thumb" />
+          <div class="gallery-caption">فاحص رقم الشاصي VIN وقارئ الاستمارة</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download & GitHub Section -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">GET THE APP NOW</span>
+        <h2 data-i18n="downloadSectionTitle">جاهز للانطلاق مع سيارتك مازدا بأعلى كفاءة؟</h2>
+        <p data-i18n="downloadSectionSub">حمل التطبيق الآن واستمتع بفحص احترافي يغنيك عن مراكز الفحص المكلفة</p>
+      </div>
+
+      <div class="download-grid">
+        <!-- Direct APK -->
+        <div class="download-card">
+          <div class="download-icon">🤖</div>
+          <h3 data-i18n="downloadApkCard">ملف التثبيت المباشر APK</h3>
+          <p data-i18n="downloadApkDesc">أحدث إصدار V1.0.1 يدعم أندرويد 8 إلى أندرويد 16 (API 36)</p>
+          <a href="https://github.com/omar-bakhsh" target="_blank" rel="noopener" class="btn btn-primary" style="width: 100%;">
+            📥 تحميل ملف APK المباشر
+          </a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="download-card">
+          <div class="download-icon">🐙</div>
+          <h3 data-i18n="githubCard">الكود المصدري على GitHub</h3>
+          <p data-i18n="githubDesc">مرخص ومفتوح المصدر، مبني بأحدث تقنيات React Native و Expo</p>
+          <a href="https://github.com/omar-bakhsh" target="_blank" rel="noopener" class="btn btn-secondary" style="width: 100%;">
+            ⭐ زيارة المستودع على GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">SUPPORT & PARTNERSHIPS</span>
+        <h2 data-i18n="contactTitle">تواصل مع المطور والشراكات الفنية</h2>
+        <p data-i18n="contactSub">للاستفسارات التقنية، طلب دعم ورش العمل، أو المساهمة في قاعدة البيانات</p>
+      </div>
+
+      <div class="contact-box">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name" data-i18n="contactName">الاسم الكريم</label>
+            <input type="text" id="contact-name" required placeholder="مثال: م. عمر بخش">
+          </div>
+          <div class="form-group">
+            <label for="contact-email" data-i18n="contactEmail">البريد الإلكتروني</label>
+            <input type="email" id="contact-email" required placeholder="name@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="contact-msg" data-i18n="contactMsg">رسالتك أو ملاحظتك</label>
+            <textarea id="contact-msg" rows="4" required placeholder="اكتب استفسارك أو طلبك الفني هنا..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="contactSubmit">إرسال الرسالة</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand-wrap">
+          <img src="web-assets/logo-blue.png" alt="MazdaCare Pro" class="brand-logo" onerror="this.src='web-assets/app-icon.jpg'">
+          <div>
+            <h4 style="font-weight: 800;">MazdaCare Pro</h4>
+            <p style="font-size: 0.8rem; color: var(--text-dim);">Smart Automotive Diagnostics Companion</p>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="privacy.html" target="_blank">سياسة الخصوصية (Privacy Policy)</a>
+          <a href="#features">المميزات</a>
+          <a href="#vin-tool">فاحص VIN</a>
+          <a href="#download">التحميل</a>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p data-i18n="footerRights">جميع الحقوق محفوظة © 2026 تطبيق MazdaCare Pro. برمجة وتطوير عمر بخش (Omar Bakhsh).</p>
+        <p data-i18n="footerDisclaimer" style="margin-top: 8px;">تنبيه: هذا التطبيق هو أداة هندسية ورفيق صيانة مستقل من تطوير ملاك وعشاق سيارات مازدا، وليس منتجاً رسمياً صادراً عن شركة مازدا موتور كوربوريشن.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Screenshots -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="Enlarged View" class="lightbox-img" id="lightbox-img">
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

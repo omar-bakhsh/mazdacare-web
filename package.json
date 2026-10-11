@@ -1,0 +1,30 @@
+{
+  "name": "mazdacare-web",
+  "version": "1.0.1",
+  "description": "MazdaCare Pro - Official Web Showcase & REST Diagnostic API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node -e \"console.log('OK')\""
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "mazda",
+    "obd2",
+    "vin-decoder",
+    "elm327",
+    "car-diagnostics",
+    "skyactiv"
+  ],
+  "author": "Omar Bakhsh",
+  "license": "MIT"
+}
