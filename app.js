@@ -290,7 +290,7 @@
     // Update Lang Switcher button text
     const langBtn = document.getElementById('lang-switch-btn');
     if (langBtn) {
-      const globeSvg = `<svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
+      const globeSvg = `<svg class="svg-icon svg-icon-sm svg-stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`;
       langBtn.innerHTML = lang === 'ar' ? `${globeSvg} English` : `${globeSvg} العربية`;
     }
 
@@ -443,21 +443,21 @@
           <div class="dtc-card-body">
             <div class="dtc-sub-block">
               <h5>
-                <svg class="svg-icon svg-icon-sm" style="color: #ef4444;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <svg class="svg-icon svg-icon-sm svg-stroke" style="color: #ef4444;" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                 ${currentLang === 'ar' ? 'الأعراض المرافقة:' : 'Symptoms:'}
               </h5>
               <ul>${symptoms.map(s => `<li>${s}</li>`).join('')}</ul>
             </div>
             <div class="dtc-sub-block">
               <h5>
-                <svg class="svg-icon svg-icon-sm" style="color: #d97706;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <svg class="svg-icon svg-icon-sm svg-stroke" style="color: #d97706;" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                 ${currentLang === 'ar' ? 'الأسباب المحتملة:' : 'Possible Causes:'}
               </h5>
               <ul>${causes.map(c => `<li>${c}</li>`).join('')}</ul>
             </div>
             <div class="dtc-sub-block fixes">
               <h5>
-                <svg class="svg-icon svg-icon-sm" style="color: #16a34a;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                <svg class="svg-icon svg-icon-sm svg-stroke" style="color: #16a34a;" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                 ${currentLang === 'ar' ? 'خطوات الإصلاح المعتمدة:' : 'Recommended Technical Fixes:'}
               </h5>
               <ul>${fixes.map(f => `<li>${f}</li>`).join('')}</ul>
@@ -541,7 +541,7 @@
         <div class="specs-table-grid">
           <div class="spec-cell">
             <span class="spec-icon" style="color: #16a34a;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'لزوجة زيت المحرك' : 'Engine Oil Viscosity'}</strong>
@@ -550,7 +550,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #0284c7;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><path d="M18 8h4a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-4"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سعة تعبئة الزيت' : 'Oil Sump Capacity'}</strong>
@@ -559,7 +559,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #7c3aed;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'رقم فلتر الزيت OEM' : 'OEM Oil Filter Part'}</strong>
@@ -568,7 +568,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #c41230;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سائل ناقل الحركة (القير)' : 'Transmission Fluid (ATF)'}</strong>
@@ -578,7 +578,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #0284c7;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سائل تبريد المحرك' : 'Engine Coolant'}</strong>
@@ -588,7 +588,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #d97706;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'شمعات الإشعال (البواجي)' : 'Spark Plugs & Torque'}</strong>
@@ -598,7 +598,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #475569;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-4H7L5 12v5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M5 17h14v-5l-2-4H7L5 12v5z"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'زيوت الدبل والدفرنس (AWD)' : 'Transfer Case & Diff'}</strong>
@@ -607,7 +607,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #16a34a;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="11" x2="23" y2="13"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="11" x2="23" y2="13"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'البطارية ونظام i-STOP' : 'Battery & i-STOP System'}</strong>
@@ -616,7 +616,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #dc2626;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'سائل الفرامل وضغط الإطارات' : 'Brake Fluid & Tire PSI'}</strong>
@@ -625,7 +625,7 @@
           </div>
           <div class="spec-cell">
             <span class="spec-icon" style="color: #0284c7;">
-              <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h12V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v18z"/><path d="M15 10h2a2 2 0 0 1 2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.41L18 4"/><line x1="3" y1="11" x2="15" y2="11"/></svg>
+              <svg class="svg-icon svg-icon-lg svg-stroke" viewBox="0 0 24 24"><path d="M3 22h12V4a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v18z"/><path d="M15 10h2a2 2 0 0 1 2 2v7a2 2 0 0 0 2 2 2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.41L18 4"/><line x1="3" y1="11" x2="15" y2="11"/></svg>
             </span>
             <div>
               <strong>${currentLang === 'ar' ? 'نوع البنزين وسعة التانكي' : 'Fuel Grade & Fuel Tank'}</strong>
@@ -635,11 +635,11 @@
         </div>
         <div class="specs-actions">
           <button id="copy-specs-btn" class="btn btn-secondary">
-            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <svg class="svg-icon svg-icon-sm svg-stroke" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
             ${currentLang === 'ar' ? 'نسخ المواصفات' : 'Copy Specs'}
           </button>
           <a id="share-whatsapp-btn" class="btn btn-whatsapp" target="_blank" rel="noopener">
-            <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.33c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.23-.76-2.69-1.12-4.42-3.86-4.55-4.04-.14-.19-1.1-1.46-1.1-2.79 0-1.32.69-1.97.94-2.24.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.4.06.61.56.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.05 1.13 1 2.08 1.31 2.38 1.46.29.15.47.13.64-.07.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.27.1 1.74.82 2.04.97.3.15.5.23.57.36.07.12.07.72-.17 1.4z"/></svg>
+            <svg class="svg-icon svg-icon-sm svg-fill" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.33c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.23-.76-2.69-1.12-4.42-3.86-4.55-4.04-.14-.19-1.1-1.46-1.1-2.79 0-1.32.69-1.97.94-2.24.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.4.06.61.56.24.58.82 2 .89 2.15.07.15.12.33.02.53-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.77 1.27 1.65 2.05 1.13 1 2.08 1.31 2.38 1.46.29.15.47.13.64-.07.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.27.1 1.74.82 2.04.97.3.15.5.23.57.36.07.12.07.72-.17 1.4z"/></svg>
             ${currentLang === 'ar' ? 'مشاركة عبر واتساب' : 'Share on WhatsApp'}
           </a>
         </div>
@@ -747,7 +747,7 @@
             ${items.map(it => `
               <li>
                 <span class="check-icon">
-                  <svg class="svg-icon svg-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg class="svg-icon svg-icon-sm svg-stroke" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                 </span>
                 <span>${it}</span>
               </li>
@@ -857,11 +857,12 @@
 
   // --- Mobile Hamburger Menu ---
   function initMobileMenu() {
-    const toggle = document.getElementById('mobile-nav-toggle');
+    const toggle = document.getElementById('mobile-toggle') || document.getElementById('mobile-nav-toggle');
     const menu = document.getElementById('nav-links');
     if (!toggle || !menu) return;
 
-    toggle.onclick = () => {
+    toggle.onclick = (e) => {
+      e.stopPropagation();
       menu.classList.toggle('open');
       toggle.classList.toggle('open');
     };
@@ -871,6 +872,13 @@
         menu.classList.remove('open');
         toggle.classList.remove('open');
       };
+    });
+
+    document.addEventListener('click', (e) => {
+      if (menu.classList.contains('open') && !menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('open');
+        toggle.classList.remove('open');
+      }
     });
   }
 
