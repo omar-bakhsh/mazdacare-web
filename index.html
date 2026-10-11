@@ -60,7 +60,8 @@
       <div class="hero-grid">
         <div class="hero-content">
           <div class="hero-badge-pill" data-i18n="heroBadge">
-            <span>✨</span> تطبيق مهندسي وملاك مازدا الأول 🚗
+            <span class="badge-gold">👑 تطبيق مدفوع (بقيمة 99 ر.س)</span>
+            <span class="badge-free-accent">متاح مجاناً لأول 12 مختبراً فقط! 🎁</span>
           </div>
           <h1 class="hero-title" data-i18n="heroTitle">
             الفحص الذكي والصيانة الاحترافية <span>لسيارات مازدا</span>
@@ -70,13 +71,13 @@
           </p>
           <div class="hero-cta-group">
             <a href="https://play.google.com/apps/testing/com.mazdacare.app" target="_blank" rel="noopener" class="btn btn-primary btn-pulse" id="hero-tester-btn">
-              ⚡ الانضمام للاختبار والتحميل من Google Play
+              ⚡ احصل على نسختك المجانية من Google Play
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.mazdacare.app" target="_blank" rel="noopener" class="btn btn-secondary">
               🛍️ صفحة التطبيق على Google Play
             </a>
             <a href="#tester-guide" class="btn btn-secondary">
-              ℹ️ طريقة التثبيت السريع
+              ℹ️ تفاصيل العرض المجاني
             </a>
           </div>
 
@@ -103,10 +104,10 @@
               </div>
             </div>
             <div class="floating-telemetry-badge telemetry-bottom-left">
-              <span style="font-size: 1.4rem;">✅</span>
+              <span style="font-size: 1.4rem;">🏷️</span>
               <div>
-                <small style="font-size: 0.72rem; color: var(--text-dim);">Google Play Closed Test</small>
-                <strong style="color: #34c759;">متاح للتنزيل المباشر الآن</strong>
+                <small style="font-size: 0.72rem; color: var(--text-dim);">عرض الإطلاق التجريبي</small>
+                <strong style="color: #34c759;"><del style="color: #9aa0a6; font-size: 0.8rem;">99 ر.س</del> مجاناً 100%</strong>
               </div>
             </div>
           </div>
@@ -119,21 +120,42 @@
   <section class="section-tester-banner" id="tester-guide">
     <div class="container">
       <div class="tester-card-box">
-        <div class="tester-card-header">
+        <!-- Pricing Spotlight Banner -->
+        <div class="pricing-spotlight-box">
+          <div class="pricing-spotlight-header">
+            <span class="promo-fire-badge">🔥 عرض حصري ومحدود للغاية</span>
+            <span class="promo-seats-badge">متبقي 8 مقاعد مجانية فقط!</span>
+          </div>
+          <div class="pricing-compare-grid">
+            <div class="price-box original">
+              <span class="price-label">السعر الرسمي عند الإطلاق العام</span>
+              <div class="price-amount-strike">99.00 <span class="currency">ر.س</span></div>
+              <span class="price-note">رسوم الترخيص الكامل على المتجر</span>
+            </div>
+            <div class="pricing-arrow">➔</div>
+            <div class="price-box promo">
+              <span class="price-label">سعر الإطلاق التجريبي الحالي (Google Play)</span>
+              <div class="price-amount-free">0.00 <span class="currency">ر.س</span> <span class="free-text">مجاناً بالكامل</span></div>
+              <span class="price-lifetime-tag">🎉 ترخيص مجاني دائم مدى الحياة (Lifetime License)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tester-card-header" style="margin-top: 24px;">
           <div class="tester-tag-pill">
             <span class="pulse-dot"></span> برنامج الاختبار المسبق الرسمي (Google Play Closed Testing)
           </div>
-          <h2>انضم إلى مختبري MazdaCare Pro وافتح كافة المميزات مجاناً!</h2>
+          <h2>حمّل التطبيق الآن مجاناً قبل تحويله للنسخة المدفوعة!</h2>
           <p>
-            تطبيقنا حالياً في مرحلة الاختبار المغلق الرسمي على متجر Google Play. انضمامك الآن يمنحك صلاحية تجربة مجانية فورية ويساعدنا في سرعة إطلاق النسخة العامة للجميع.
+            تطبيق <strong>MazdaCare Pro</strong> هو تطبيق هندسي متطور ومدفوع بقيمة <strong>99 ريالاً</strong>. نتيحه الآن مجاناً بالكامل لأول <strong>12 مختبراً فقط</strong> عبر متجر Google Play لمشاركتنا آرائهم الفنية. بمجرد اكتمال الـ 12 مختبراً، سيتم إغلاق التسجيل المجاني وسينتقل التطبيق للسعر المدفوع للجميع.
           </p>
         </div>
 
         <!-- Progress counter (4 of 12) -->
         <div class="tester-progress-wrap">
           <div class="tester-progress-labels">
-            <span><strong>المختبرون النشطون حالياً:</strong> 4 مختبرين</span>
-            <span><strong>الهدف للإطلاق العام:</strong> 12 مختبراً (متبقي 8 فقط!)</span>
+            <span><strong>تم حجز:</strong> 4 مقاعد مجانية</span>
+            <span><strong>المقاعد المجانية المتبقية:</strong> 8 مقاعد فقط (سارع بالحجز قبل الإغلاق!)</span>
           </div>
           <div class="tester-progress-bar">
             <div class="tester-progress-fill" style="width: 33.3%;"></div>
@@ -145,22 +167,22 @@
           <div class="tester-step-item">
             <div class="step-number">1</div>
             <div class="step-body">
-              <h4>اضغط رابط الانضمام</h4>
-              <p>اضغط الزر الأخضر بالأسفل للدخول إلى صفحة قبول الاختبار الرسمية من Google Play.</p>
+              <h4>اضغط رابط الانضمام المجاني</h4>
+              <p>اضغط الزر الأخضر بالأسفل للانتقال لصفحة قبول الاختبار الرسمية من Google Play.</p>
             </div>
           </div>
           <div class="tester-step-item">
             <div class="step-number">2</div>
             <div class="step-body">
               <h4>قبول الاختبار (Become a Tester)</h4>
-              <p>اضغط على زر <strong>"الانضمام للاختبار"</strong> ليتم تسجيل حسابك تلقائياً وبشكل فوري.</p>
+              <p>اضغط على زر <strong>"الانضمام للاختبار"</strong> لتثبيت ترخيصك المجاني تلقائياً في حساب Google.</p>
             </div>
           </div>
           <div class="tester-step-item">
             <div class="step-number">3</div>
             <div class="step-body">
-              <h4>تحميل التطبيق واستخدامه</h4>
-              <p>اضغط <strong>"تنزيل من Google Play"</strong> واستمتع بفحص سيارتك مازدا وتتبع الصيانة مجاناً!</p>
+              <h4>تنزيل التطبيق من المتجر</h4>
+              <p>اضغط <strong>"تنزيل من Google Play"</strong> وثبّت التطبيق بكامل ميزاته المدفوعة مجاناً!</p>
             </div>
           </div>
         </div>
@@ -170,9 +192,9 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-inline-end: 8px;">
               <path d="M3.609 1.814L13.792 12 3.61 22.186a2.008 2.008 0 0 1-.61-1.42V3.234c0-.54.22-1.04.61-1.42zm11.234 11.233l2.253 2.254-11.45 6.611 9.197-8.865zm0-2.094L5.646 2.088l11.45 6.611-2.253 2.254zm1.484 1.047l3.844-2.22c.866-.5 1.429-.02 1.429.98v2.48c0 1-.563 1.48-1.429.98l-3.844-2.22z"/>
             </svg>
-            اضغط هنا للانضمام للاختبار والتحميل المباشر من Google Play
+            احجز مقعدك المجاني وحمّل التطبيق من Google Play الآن
           </a>
-          <small class="tester-subtext">يتم التفعيل والتثبيت تلقائياً عبر متجر جوجل بلاي الرسمي دون أي تدخل أو انتظار موافقة.</small>
+          <small class="tester-subtext">تنزيل آمن ومباشر عبر متجر Google Play مع الاحتفاظ بكافة الميزات الاحترافية مجاناً مدى الحياة.</small>
         </div>
       </div>
     </div>

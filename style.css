@@ -1636,3 +1636,161 @@ button, input, select, textarea {
   padding: 3px 10px;
   border-radius: var(--radius-full);
 }
+
+/* ==========================================================================
+   Pricing Spotlight & Scarcity Badges
+   ========================================================================== */
+.badge-gold {
+  color: #ffb800;
+  font-weight: 800;
+  margin-inline-end: 6px;
+}
+
+.badge-free-accent {
+  background: rgba(52, 199, 89, 0.2);
+  color: #34c759;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 800;
+}
+
+.pricing-spotlight-box {
+  background: linear-gradient(135deg, rgba(30, 38, 56, 0.9) 0%, rgba(18, 22, 34, 0.95) 100%);
+  border: 1px solid rgba(255, 184, 0, 0.35);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 184, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.pricing-spotlight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.promo-fire-badge {
+  background: rgba(255, 59, 48, 0.18);
+  border: 1px solid rgba(255, 59, 48, 0.4);
+  color: #ff453a;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.promo-seats-badge {
+  background: rgba(255, 184, 0, 0.15);
+  border: 1px solid rgba(255, 184, 0, 0.4);
+  color: #ffb800;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 800;
+  animation: pulseGold 2s infinite ease-in-out;
+}
+
+@keyframes pulseGold {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.pricing-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1.3fr;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .pricing-compare-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .pricing-arrow {
+    display: none;
+  }
+}
+
+.price-box {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 16px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.price-box.original {
+  opacity: 0.85;
+}
+
+.price-box.promo {
+  border-color: rgba(52, 199, 89, 0.4);
+  background: rgba(52, 199, 89, 0.08);
+}
+
+.price-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.price-amount-strike {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ff453a;
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  line-height: 1.2;
+}
+
+.price-amount-free {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #34c759;
+  line-height: 1.2;
+}
+
+.price-amount-free .currency {
+  font-size: 1.2rem;
+}
+
+.free-text {
+  font-size: 0.95rem;
+  background: #34c759;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 800;
+  vertical-align: middle;
+  margin-inline-start: 8px;
+}
+
+.price-note {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.price-lifetime-tag {
+  display: block;
+  font-size: 0.84rem;
+  color: #34c759;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.pricing-arrow {
+  font-size: 2rem;
+  color: var(--cyber-cyan);
+  display: flex;
+  justify-content: center;
+}
