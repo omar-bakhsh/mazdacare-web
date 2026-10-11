@@ -796,7 +796,7 @@
         }
       } catch (err) {
         // Fallback for static GitHub Pages: Opens direct WhatsApp or mailto
-        window.open(`mailto:omarbakhsh@hotmail.com?subject=MazdaCare Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`);
+        window.open(`mailto:weeb.dd@gmail.com?subject=MazdaCare Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`);
         showToast(currentLang === 'ar' ? 'جاري فتح تطبيق البريد لإرسال رسالتك.' : 'Opening mail app...');
         form.reset();
       } finally {
